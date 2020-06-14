@@ -2,6 +2,7 @@ import React from 'react';
 import hardcodeddata from '../data.json';
 import MatchesList from '../components/MatchesList';
 import PageLoading from '../components/PageLoading';
+import PageError from '../components/PageError';
 
 class Matches extends React.Component {
 	state = {
@@ -18,11 +19,11 @@ class Matches extends React.Component {
 		this.setState({ loading: true, error: null });
 
 		try {
-			// throw new Error('Not Found');
+			//throw new Error('500: Server Error');
 			const data = {
 				matches: hardcodeddata.matches
 			};
-			this.setState({ loading: true, data: data });
+			this.setState({ loading: false, data: data });
 		} catch (error) {
 			this.setState({ loading: false, error: error });
 		}
@@ -43,7 +44,7 @@ class Matches extends React.Component {
 		}
 
 		if (this.state.error) {
-			return `Error: ${this.state.error.message}`;
+			return <PageError error={this.state.error} />;
 		}
 
 		return (
