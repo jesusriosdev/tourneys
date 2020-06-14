@@ -1,0 +1,58 @@
+{
+    "teams" : [
+        {
+            "id": 1,
+            "name": "SUPERSTARS",
+            "owner": "Meño"
+        },
+        {
+            "id": 2,
+            "name": "FC VALLE DORADO",
+            "owner": "Ubis"
+        },
+        {
+            "id": 3,
+            "name": "ATLETICO PALACO",
+            "owner": "Barril"
+        },
+        {
+            "id": 4,
+            "name": "NIUPI",
+            "owner": "Ramon"
+        },
+        {
+            "id": 5,
+            "name": "PALACO FC",
+            "owner": "Charolo"
+        },
+        {
+            "id": 6,
+            "name": "HOOLIGANS",
+            "owner": "Gugu"
+        }
+    ],
+
+	"matches": [
+		{
+			"id": 1,
+			"local_team_id": 1,
+			"away_team_id": 2,
+			"local_team_score": 7,
+			"away_team_score": 0
+		},
+		{
+			"id": 2,
+			"local_team_id": 3,
+			"away_team_id": 4,
+			"local_team_score": 4,
+			"away_team_score": 5
+		},
+		{
+			"id": 3,
+			"local_team_id": 5,
+			"away_team_id": 6,
+			"local_team_score": 3,
+			"away_team_score": 2
+		}
+	]
+}
