@@ -12,7 +12,9 @@ body {
 }
 
 h1 {
-	font-family: 'Anton', sans-serif;
+	/* font-family: 'Anton', sans-serif; */
+	margin: 15px 0;
+	text-align: center;
 }
 
 a.link-unstyled {
@@ -22,6 +24,11 @@ a.link-unstyled {
 a.link-unstyled:hover {
 	color: inherit;
 	text-decoration: none;
+}
+
+.horizontal-separator {
+	margin: 40px 0;
+	border-bottom: #000 solid 1px;
 }
 
 .btn {
@@ -71,3 +78,4 @@ a.link-unstyled:hover {
 .btn.btn-danger:not(:disabled):not(.disabled):focus {
 	box-shadow: 0 0 0 0.2rem rgba(255, 64, 64, 0.5);
 }
+

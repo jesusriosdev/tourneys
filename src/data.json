@@ -1,36 +1,111 @@
 {
-    "teams" : [
-        {
-            "id": 1,
-            "name": "SUPERSTARS",
-            "owner": "Meño"
-        },
-        {
-            "id": 2,
-            "name": "FC VALLE DORADO",
-            "owner": "Ubis"
-        },
-        {
-            "id": 3,
-            "name": "ATLETICO PALACO",
-            "owner": "Barril"
-        },
-        {
-            "id": 4,
-            "name": "NIUPI",
-            "owner": "Ramon"
-        },
-        {
-            "id": 5,
-            "name": "PALACO FC",
-            "owner": "Charolo"
-        },
-        {
-            "id": 6,
-            "name": "HOOLIGANS",
-            "owner": "Gugu"
-        }
-    ],
+	"teams": [
+		{
+			"id": 1,
+			"name": "SUPERSTARS",
+            "owner": "Meño",
+			"description": "El mejor de todos :) (antes..)",
+			"badge_file_name": "team_badge_1.png"
+		},
+		{
+			"id": 2,
+			"name": "FC VALLE DORADO",
+            "owner": "Ubis",
+            "description": "El que organiza esto de los torneos.",
+			"badge_file_name": "team_badge_2.png"
+		},
+		{
+			"id": 3,
+			"name": "HOOLIGANS",
+			"owner": "Gugu",
+            "description": "El fintas locas.",
+			"badge_file_name": "team_badge_3.png"
+		},
+		{
+			"id": 4,
+			"name": "ATLETICO PALACO",
+			"owner": "Barril",
+            "description": "",
+			"badge_file_name": "team_badge_4.png"
+		},
+		{
+			"id": 5,
+			"name": "NIUPI",
+			"owner": "Ramon",
+            "description": "",
+			"badge_file_name": "team_badge_5.png"
+		},
+		{
+			"id": 6,
+			"name": "PALACO FC",
+			"owner": "Charolo",
+            "description": "",
+			"badge_file_name": "team_badge_6.png"
+		},
+		{
+			"id": 7,
+			"name": "MEMO",
+			"owner": "Memo",
+            "description": "",
+			"badge_file_name": "team_badge_7.png"
+		}
+	],
+
+	"tourney_types": [
+		{
+			"id": 1,
+			"description": "TORNEO FEG",
+			"image_path": ""
+		},
+		{
+			"id": 2,
+			"description": "LIGA FEG",
+			"image_path": ""
+		},
+		{
+			"id": 3,
+			"description": "CHAMPIONS FEG",
+			"image_path": ""
+		},
+		{
+			"id": 4,
+			"description": "COPA FEG",
+			"image_path": ""
+		}
+	],
+
+	"championships": [
+		{
+			"id": 1,
+			"team_id": 1,
+			"tourney_type_id": 1
+		},
+		{
+			"id": 2,
+			"team_id": 1,
+			"tourney_type_id": 1
+		},
+		{
+			"id": 3,
+			"team_id": 1,
+			"tourney_type_id": 1
+		},
+		{
+			"id": 4,
+			"team_id": 2,
+			"tourney_type_id": 1
+		},
+		{
+			"id": 5,
+			"team_id": 2,
+			"tourney_type_id": 1
+		},
+		{
+			"id": 6,
+			"team_id": 3,
+			"tourney_type_id": 1
+		}
+	],
 
 	"matches": [
 		{

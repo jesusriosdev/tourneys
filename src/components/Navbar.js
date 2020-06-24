@@ -6,15 +6,30 @@ import logo from '../images/logo-feg_94x59.png';
 class Navbar extends React.Component {
 	render() {
 		return (
-			<div className="Navbar">
-				<div className="container-fluid">
-					<Link className="Navbar__brand" to="/">
-						<img className="Navbar__brand-logo" src={logo} alt="logo" />
-						<span className="font-weight-light">Torneos</span>
-						<span className="font-weight-bold">FEG</span>
-					</Link>
-				</div>
-			</div>
+			<nav>
+				<Link className="nav__logo" to="/">
+					<img src={logo} alt="logo" />
+					<span className="font-weight-light">Torneos</span>
+					<span className="font-weight-bold">FEG</span>
+				</Link>
+
+				<input type="checkbox" id="check" />
+				<label htmlFor="check" className="checkbtn">
+					<i className="fa fa-bars"></i>
+				</label>
+				
+				<ul>
+					<li>
+						<Link className="active" to="/teams">
+							Equipos
+						</Link>
+					</li>
+					<li>
+						<Link to="/matches">Partidos</Link>
+					</li>
+				</ul>
+
+			</nav>
 		);
 	}
 }

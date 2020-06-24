@@ -5,6 +5,7 @@ import PageLoading from '../components/PageLoading';
 import PageError from '../components/PageError';
 
 class Matches extends React.Component {
+	
 	state = {
 		loading: true,
 		error: null,
@@ -28,15 +29,6 @@ class Matches extends React.Component {
 			this.setState({ loading: false, error: error });
 		}
 	};
-
-	constructor(props) {
-		super(props);
-
-		// this.state = {
-		// 	data: []
-		// };
-		// console.log(this.state);
-	}
 
 	render() {
 		if (this.state.loading === true) {
