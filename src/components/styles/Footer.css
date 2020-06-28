@@ -1,0 +1,13 @@
+footer {
+    
+}
+
+footer a {
+    color: black;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: black;
+    cursor: pointer;
+}

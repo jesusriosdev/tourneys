@@ -1,12 +1,16 @@
 import React from 'react';
 
-import Navbar from './Navbar';
+import Header from './Header';
+import Footer from './Footer';
 
 function Layout(props) {
 	return (
 		<React.Fragment>
-			<Navbar />
-			{props.children}
+			<Header />
+			<div className="content">
+				{props.children}
+			</div>
+			<Footer />
 		</React.Fragment>
 	);
 }

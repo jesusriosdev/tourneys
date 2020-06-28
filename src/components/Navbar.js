@@ -25,7 +25,7 @@ class Navbar extends React.Component {
 						</Link>
 					</li>
 					<li>
-						<Link to="/matches">Partidos</Link>
+						<Link to="/liga">Liga</Link>
 					</li>
 				</ul>
 

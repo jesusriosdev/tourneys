@@ -4,7 +4,7 @@ import './styles/TeamsList.css';
 
 class TeamsList extends React.Component {
 	render() {
-		if (this.props.teams.length === 0) {
+		if (this.props.teams && this.props.teams.length === 0) {
 			return (
 				<div>
 					<h3>No se encontraron partidos.</h3>
@@ -16,20 +16,25 @@ class TeamsList extends React.Component {
 				<div className="container-fluid">
 					{this.props.teams.map((team) => (
 						<div className="team-card row" key={team.id}>
-							<div className="team-card__badge d-flex justify-content-center col-12 col-sm-2">
+							<div className="team-card__badge col-12 col-sm-2">
 								<img
 									src={require(`../images/badges/${team.badge_file_name}`)}
 									alt="badge"
 								/>
 							</div>
-							<div className="team-card__data d-flex col-12 col-sm-10">
-								<label className="team-card__data__team-name">
-									{team.name}
-								</label>
-								<label>({team.owner})</label>
-
+							<div className="team-card__data col-12 col-sm-10">
 								<div>
-									<p>{team.description}</p>
+									<label className="team-card__data__team-name">
+										{team.name}
+									</label>
+									<label className="team-card__data__team-owner">
+										({team.owner})
+									</label>
+								</div>
+								<div>
+									<label className="team-card__data__team-description">
+										{team.description}
+									</label>
 								</div>
 							</div>
 						</div>

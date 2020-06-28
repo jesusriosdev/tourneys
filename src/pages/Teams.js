@@ -1,11 +1,10 @@
 import React from 'react';
-import hardcodeddata from '../data.json';
+import api from '../api';
 import TeamsList from '../components/TeamsList';
 import PageLoading from '../components/PageLoading';
 import PageError from '../components/PageError';
 
 class Teams extends React.Component {
-	
 	state = {
 		loading: true,
 		error: null,
@@ -16,14 +15,11 @@ class Teams extends React.Component {
 		this.fetchData();
 	}
 
-	fetchData = () => {
+	fetchData = async () => {
 		this.setState({ loading: true, error: null });
 
 		try {
-			// throw new Error('500: Server Error');
-			const data = {
-				teams: hardcodeddata.teams
-			};
+			const data = await api.teams.list();
 			this.setState({ loading: false, data: data });
 		} catch (error) {
 			this.setState({ loading: false, error: error });
@@ -43,7 +39,7 @@ class Teams extends React.Component {
 			<div>
 				<h1>Equipos</h1>
 
-				<TeamsList teams={this.state.data.teams} />
+				<TeamsList teams={this.state.data} />
 			</div>
 		);
 	}
