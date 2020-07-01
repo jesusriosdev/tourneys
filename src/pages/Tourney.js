@@ -15,7 +15,8 @@ class Tourney extends React.Component {
 			tourney: undefined,
 			tourney_type: undefined,
 			stats: undefined,
-			matches: undefined
+			matches: undefined,
+			teams: undefined
 		};
 	}
 
@@ -48,7 +49,8 @@ class Tourney extends React.Component {
 				stats: data_stats,
 				dates: data_dates,
 				rounds: data_rounds,
-				matches: data_matches
+				matches: data_matches,
+				teams: data_teams
 			});
 		} catch (error) {
 			this.setState({ loading: false, error: error });
@@ -144,13 +146,16 @@ class Tourney extends React.Component {
 			return (
 				<div className="container">
 					<div className="row">
-						<h1>
-							{this.state.tourney_type.description} {this.state.tourney.year}
-						</h1>
+						<div className="flex-grow-1">
+							<h1>
+								{this.state.tourney_type.description} {this.state.tourney.year}
+							</h1>
+						</div>
 
 						<Table stats={this.state.stats} />
 
 						<MatchesList
+							teams={this.state.teams}
 							dates={this.state.dates}
 							rounds={this.state.rounds}
 							matches={this.state.matches}

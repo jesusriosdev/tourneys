@@ -20,12 +20,12 @@ class Navbar extends React.Component {
 				
 				<ul>
 					<li>
-						<Link className="active" to="/teams">
+						<Link className="active" to="/teams" htmlFor="check" >
 							Equipos
 						</Link>
 					</li>
 					<li>
-						<Link to="/liga">Liga</Link>
+						<Link to="/liga" htmlFor="check" >Liga</Link>
 					</li>
 				</ul>
 

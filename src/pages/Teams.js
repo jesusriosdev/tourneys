@@ -37,7 +37,7 @@ class Teams extends React.Component {
 
 		return (
 			<div>
-				<h1>Equipos</h1>
+				<h1>EQUIPOS</h1>
 
 				<TeamsList teams={this.state.data} />
 			</div>

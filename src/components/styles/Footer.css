@@ -1,13 +1,18 @@
 footer {
-    
+    background-color: #000;
+    color: #fff;
+    font-size: 1.1rem;
+    margin: 0 auto;
+    padding: 20px 0;
 }
 
 footer a {
-    color: black;
-    text-decoration: underline;
+    color: #fff;
+    margin-left: 3px;
+	text-decoration: underline;
 }
 
 footer a:hover {
-    color: black;
-    cursor: pointer;
+    color: #fff;
+	cursor: pointer;
 }

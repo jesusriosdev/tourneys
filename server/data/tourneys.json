@@ -1,0 +1,425 @@
+{
+	"tourney_types": [
+		{
+			"id": 1,
+			"description": "TORNEO FEG",
+			"image_path": ""
+		},
+		{
+			"id": 2,
+			"description": "LIGA FEG",
+			"image_path": ""
+		},
+		{
+			"id": 3,
+			"description": "COPA FEG",
+			"image_path": ""
+		},
+		{
+			"id": 4,
+			"description": "CHAMPIONS FEG",
+			"image_path": ""
+		}
+	],
+
+	"torney_status": [
+		{
+			"id": 1,
+			"description": "On Hold"
+		},
+		{
+			"id": 2,
+			"description": "In Progress"
+		},
+		{
+			"id": 3,
+			"description": "Completed"
+		},
+		{
+			"id": 4,
+			"description": "Canceled"
+		}
+	],
+
+	"tourneys": [
+		{
+			"id": 1,
+			"tourney_type_id": 2,
+			"year": 2020,
+			"tourney_status_id": 2
+		},
+		{
+			"id": 2,
+			"tourney_type_id": 3,
+			"year": 2020,
+			"tourney_status_id": 2
+		},
+		{
+			"id": 3,
+			"tourney_type_id": 4,
+			"year": 2020,
+			"tourney_status_id": 2
+		}
+	],
+
+	"dates": [
+		{
+			"id": 1,
+			"tourney_id": 1,
+			"date_number": 1
+		},
+		{
+			"id": 2,
+			"tourney_id": 1,
+			"date_number": 2
+		},
+		{
+			"id": 3,
+			"tourney_id": 1,
+			"date_number": 3
+		},
+		{
+			"id": 4,
+			"tourney_id": 1,
+			"date_number": 4
+		},
+		{
+			"id": 5,
+			"tourney_id": 1,
+			"date_number": 5
+		}
+	],
+
+	"rounds": [
+		{
+			"id": 1,
+			"tourney_id": 1,
+			"date_id": 1,
+			"round_number": 1
+		},
+		{
+			"id": 2,
+			"tourney_id": 1,
+			"date_id": 1,
+			"round_number": 2
+		},
+		{
+			"id": 3,
+			"tourney_id": 1,
+			"date_id": 1,
+			"round_number": 3
+		},
+		{
+			"id": 4,
+			"tourney_id": 1,
+			"date_id": 1,
+			"round_number": 4
+		},
+
+		{
+			"id": 5,
+			"tourney_id": 1,
+			"date_id": 2,
+			"round_number": 5
+		},
+		{
+			"id": 6,
+			"tourney_id": 1,
+			"date_id": 2,
+			"round_number": 6
+		},
+		{
+			"id": 7,
+			"tourney_id": 1,
+			"date_id": 2,
+			"round_number": 7
+		},
+		{
+			"id": 8,
+			"tourney_id": 1,
+			"date_id": 2,
+			"round_number": 8
+		},
+
+		{
+			"id": 9,
+			"tourney_id": 1,
+			"date_id": 3,
+			"round_number": 9
+		},
+		{
+			"id": 10,
+			"tourney_id": 1,
+			"date_id": 3,
+			"round_number": 10
+		},
+		{
+			"id": 11,
+			"tourney_id": 1,
+			"date_id": 3,
+			"round_number": 11
+		},
+		{
+			"id": 12,
+			"tourney_id": 1,
+			"date_id": 3,
+			"round_number": 12
+		},
+
+		{
+			"id": 13,
+			"tourney_id": 1,
+			"date_id": 4,
+			"round_number": 13
+		},
+		{
+			"id": 14,
+			"tourney_id": 1,
+			"date_id": 4,
+			"round_number": 14
+		},
+		{
+			"id": 15,
+			"tourney_id": 1,
+			"date_id": 4,
+			"round_number": 15
+		},
+		{
+			"id": 16,
+			"tourney_id": 1,
+			"date_id": 4,
+			"round_number": 16
+		},
+
+		{
+			"id": 17,
+			"tourney_id": 1,
+			"date_id": 5,
+			"round_number": 17
+		},
+		{
+			"id": 18,
+			"tourney_id": 1,
+			"date_id": 5,
+			"round_number": 18
+		},
+		{
+			"id": 19,
+			"tourney_id": 1,
+			"date_id": 5,
+			"round_number": 19
+		},
+		{
+			"id": 20,
+			"tourney_id": 1,
+			"date_id": 5,
+			"round_number": 20
+		}
+	],
+
+	"knockouts": [
+		{
+			"id": 0,
+			"number": 1,
+			"description": "Repechaje"
+		},
+		{
+			"id": 1,
+			"number": 1,
+			"description": "Cuartos de Final"
+		},
+		{
+			"id": 2,
+			"number": 1,
+			"description": "Semifinales"
+		},
+		{
+			"id": 3,
+			"number": 1,
+			"description": "Final"
+		}
+	],
+
+	"match_status": [
+		{
+			"id": 1,
+			"description": "Pending"
+		},
+		{
+			"id": 2,
+			"description": "Completed"
+		}
+	],
+
+	"matches": [
+		{
+			"id": 1,
+			"tourney_id": 1,
+			"round_id": 1,
+			"match_status_id": 1,
+
+			"local_team_id": 2,
+			"away_team_id": 6,
+			"local_team_score": 0,
+			"away_team_score": 0
+		},
+		{
+			"id": 2,
+			"tourney_id": 1,
+			"round_id": 1,
+			"match_status_id": 1,
+
+			"local_team_id": 1,
+			"away_team_id": 3,
+			"local_team_score": 0,
+			"away_team_score": 0
+		},
+		{
+			"id": 3,
+			"tourney_id": 1,
+			"round_id": 1,
+			"match_status_id": 1,
+
+			"local_team_id": 4,
+			"away_team_id": 5,
+			"local_team_score": 0,
+			"away_team_score": 0
+		},
+
+		{
+			"id": 4,
+			"tourney_id": 1,
+			"round_id": 2,
+			"match_status_id": 1,
+
+			"local_team_id": 4,
+			"away_team_id": 2,
+			"local_team_score": 0,
+			"away_team_score": 0
+		},
+		{
+			"id": 5,
+			"tourney_id": 1,
+			"round_id": 2,
+			"match_status_id": 1,
+
+			"local_team_id": 5,
+			"away_team_id": 1,
+			"local_team_score": 0,
+			"away_team_score": 0
+		},
+		{
+			"id": 6,
+			"tourney_id": 1,
+			"round_id": 2,
+			"match_status_id": 1,
+
+			"local_team_id": 3,
+			"away_team_id": 6,
+			"local_team_score": 0,
+			"away_team_score": 0
+		},
+
+		{
+			"id": 7,
+			"tourney_id": 1,
+			"round_id": 3,
+			"match_status_id": 1,
+
+			"local_team_id": 2,
+			"away_team_id": 3,
+			"local_team_score": 0,
+			"away_team_score": 0
+		},
+		{
+			"id": 8,
+			"tourney_id": 1,
+			"round_id": 3,
+			"match_status_id": 1,
+
+			"local_team_id": 6,
+			"away_team_id": 5,
+			"local_team_score": 0,
+			"away_team_score": 0
+		},
+		{
+			"id": 9,
+			"tourney_id": 1,
+			"round_id": 3,
+			"match_status_id": 2,
+
+			"local_team_id": 1,
+			"away_team_id": 4,
+			"local_team_score": 2,
+			"away_team_score": 3
+		},
+
+		{
+			"id": 10,
+			"tourney_id": 1,
+			"round_id": 4,
+			"match_status_id": 1,
+
+			"local_team_id": 1,
+			"away_team_id": 2,
+			"local_team_score": 0,
+			"away_team_score": 0
+		},
+		{
+			"id": 11,
+			"tourney_id": 1,
+			"round_id": 4,
+			"match_status_id": 1,
+
+			"local_team_id": 4,
+			"away_team_id": 6,
+			"local_team_score": 0,
+			"away_team_score": 0
+		},
+		{
+			"id": 12,
+			"tourney_id": 1,
+			"round_id": 4,
+			"match_status_id": 1,
+
+			"local_team_id": 5,
+			"away_team_id": 3,
+			"local_team_score": 0,
+			"away_team_score": 0
+		},
+
+		{
+			"id": 1001,
+			"tourney_id": 2,
+			"knockout_id": 1,
+			"match_status_id": 1,
+
+			"local_team_id": 2,
+			"away_team_id": 6,
+			"local_team_score": 0,
+			"away_team_score": 0
+		},
+		{
+			"id": 1002,
+			"tourney_id": 2,
+			"knockout_id": 1,
+			"match_status_id": 1,
+
+			"local_team_id": 5,
+			"away_team_id": 3,
+			"local_team_score": 0,
+			"away_team_score": 0
+		},
+		{
+			"id": 1003,
+			"tourney_id": 2,
+			"knockout_id": 1,
+			"match_status_id": 1,
+
+			"local_team_id": 4,
+			"away_team_id": 1,
+			"local_team_score": 0,
+			"away_team_score": 0
+		}
+	]
+}
