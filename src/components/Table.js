@@ -10,7 +10,7 @@ class MatchesList extends React.Component {
 					<thead className="thead-light">
 						<tr>
 							<td>#</td>
-							<td></td>
+							<td className="w30px"></td>
 							<td className="d-none d-sm-table-cell text-left">Equipo</td>
 							<td>PJ</td>
 							<td>G</td>
@@ -28,7 +28,7 @@ class MatchesList extends React.Component {
 								<td className="font-weight-bold">{position++}</td>
 								<td>
 									<img
-										height="25"
+										height="30"
 										src={require(`../images/badges/${stat.badge}`)}
 										alt="badge"
 										title={`${stat.team}`}

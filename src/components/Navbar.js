@@ -4,6 +4,23 @@ import './styles/Navbar.css';
 import logo from '../images/logo-feg_94x59.png';
 
 class Navbar extends React.Component {
+	constructor(props) {
+        super(props)
+        this.state = {
+            checkboxChecked: false
+        }
+	}
+	
+    onClick = () => {
+        this.setState({
+            checkboxChecked: !this.state.checkboxChecked
+        })
+    }
+
+    checkboxHandler = () => {
+		
+    }
+
 	render() {
 		return (
 			<nav>
@@ -13,19 +30,19 @@ class Navbar extends React.Component {
 					<span className="font-weight-bold">FEG</span>
 				</Link>
 
-				<input type="checkbox" id="check" />
-				<label htmlFor="check" className="checkbtn">
+				<input type="checkbox" id="check" checked={this.state.checkboxChecked} onChange={this.checkboxHandler} />
+				<label className="checkbtn" onClick = {this.onClick} >
 					<i className="fa fa-bars"></i>
 				</label>
 				
 				<ul>
 					<li>
-						<Link className="active" to="/teams" htmlFor="check" >
+						<Link className="active" to="/teams" onClick={this.onClick} >
 							Equipos
 						</Link>
 					</li>
 					<li>
-						<Link to="/liga" htmlFor="check" >Liga</Link>
+						<Link to="/liga" onClick = {this.onClick} >Liga</Link>
 					</li>
 				</ul>
 

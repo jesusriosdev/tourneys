@@ -5,3 +5,7 @@ thead tr td {
 td {
     text-align: center;
 }
+
+td.w30px {
+    width: 30px;
+}
