@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.css';
 import './global.css';
 
-import App from './components/App';
+import App from './pages/App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(

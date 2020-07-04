@@ -1,4 +1,5 @@
-const BASE_URL = 'http://localhost:3001';
+const BASE_URL = 'http://localhost:3001/api';
+// const BASE_URL = 'https://torneosfeg.com/api';
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const randomNumber = (min = 0, max = 1) =>
@@ -61,8 +62,8 @@ const api = {
 		read(tourney_type_id) {
 			return callApi(`/tourney_types/${tourney_type_id}`);
 		}
-  },
-  
+	},
+
 	tourneys: {
 		list() {
 			return callApi('/tourneys');
@@ -70,8 +71,8 @@ const api = {
 		read(tourney_id) {
 			return callApi(`/tourneys/${tourney_id}`);
 		}
-  },
-  
+	},
+
 	matches: {
 		async list(tourney_id) {
 			var result = await callApi('/matches');
@@ -83,9 +84,9 @@ const api = {
 		read(match_id) {
 			return callApi(`/matches/${match_id}`);
 		}
-  },
-  
-  dates: {
+	},
+
+	dates: {
 		async list(tourney_id) {
 			var result = await callApi('/dates');
 			var result_filtered = result.filter((item) => {
@@ -96,8 +97,8 @@ const api = {
 		read(date_id) {
 			return callApi(`/dates/${date_id}`);
 		}
-  },
-  rounds: {
+	},
+	rounds: {
 		async list(tourney_id) {
 			var result = await callApi('/rounds');
 			var result_filtered = result.filter((item) => {
@@ -108,7 +109,7 @@ const api = {
 		read(round_id) {
 			return callApi(`/rounds/${round_id}`);
 		}
-	},
+	}
 };
 
 export default api;

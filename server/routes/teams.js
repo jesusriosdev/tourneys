@@ -1,5 +1,6 @@
 const teamRoutes = (app, fs) => {
 	const dataPath = './data/teams.json';
+	const baseFolder = '/api';
 
 	// refactored helper methods
 	const readFile = (
@@ -34,7 +35,7 @@ const teamRoutes = (app, fs) => {
 
 	// TEAMS
 	// READ
-	app.get('/teams', (req, res) => {
+	app.get(baseFolder + '/teams', (req, res) => {
 		fs.readFile(dataPath, 'utf8', (err, data) => {
 			if (err) {
 				throw err;
@@ -45,7 +46,7 @@ const teamRoutes = (app, fs) => {
 	});
 
 	// CREATE
-	app.post('/users', (req, res) => {
+	app.post(baseFolder + '/users', (req, res) => {
 		readFile((data) => {
 			const newUserId = Object.keys(data).length + 1;
 
@@ -59,7 +60,7 @@ const teamRoutes = (app, fs) => {
 	});
 
 	// UPDATE
-	app.put('/users/:id', (req, res) => {
+	app.put(baseFolder + '/users/:id', (req, res) => {
 		readFile((data) => {
 			// add the new user
 			const userId = req.params['id'];
@@ -72,7 +73,7 @@ const teamRoutes = (app, fs) => {
 	});
 
 	// DELETE
-	app.delete('/users/:id', (req, res) => {
+	app.delete(baseFolder + '/users/:id', (req, res) => {
 		readFile((data) => {
 			// add the new user
 			const userId = req.params['id'];
@@ -87,7 +88,7 @@ const teamRoutes = (app, fs) => {
 
 	// CHAMPIONSHIPS
 	// READ
-	app.get('/championships', (req, res) => {
+	app.get(baseFolder + '/championships', (req, res) => {
 		fs.readFile(dataPath, 'utf8', (err, data) => {
 			if (err) {
 				throw err;

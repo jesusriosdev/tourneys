@@ -79,3 +79,18 @@ a.link-unstyled:hover {
 	box-shadow: 0 0 0 0.2rem rgba(255, 64, 64, 0.5);
 }
 
+#page-container {
+	position: relative;
+	min-height: 100vh;
+}
+
+#content-wrap {
+	padding-bottom: 175px; /* Footer height */
+}
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* height: 175px; Footer height */
+}

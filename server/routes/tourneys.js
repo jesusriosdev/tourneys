@@ -1,6 +1,8 @@
 const teamRoutes = (app, fs) => {
 	const dataPath = './data/tourneys.json';
+	const baseFolder = '/api';
 
+	// refactored helper methods
 	const readFile = (
 		callback,
 		returnJson = false,
@@ -32,13 +34,13 @@ const teamRoutes = (app, fs) => {
 	};
 
 	// TOURNEYS
-	app.get('/tourneys', (req, res) => {
+	app.get(baseFolder + '/tourneys', (req, res) => {
 		readFile((data) => {
 			var result = data['tourneys'];
 			res.send(result);
 		}, true);
 	});
-	app.get('/tourneys/:id', (req, res) => {
+	app.get(baseFolder + '/tourneys/:id', (req, res) => {
 		readFile((data) => {
 			const id = parseInt(req.params['id']);
 			var result = data['tourneys'];
@@ -50,13 +52,13 @@ const teamRoutes = (app, fs) => {
 	});
 
 	// TOURNEY_TYPES
-	app.get('/tourney_types', (req, res) => {
+	app.get(baseFolder + '/tourney_types', (req, res) => {
 		readFile((data) => {
 			var result = data['tourney_types'];
 			res.send(result);
 		}, true);
 	});
-	app.get('/tourney_types/:id', (req, res) => {
+	app.get(baseFolder + '/tourney_types/:id', (req, res) => {
 		readFile((data) => {
 			const id = parseInt(req.params['id']);
 			var result = data['tourney_types'];
@@ -68,7 +70,7 @@ const teamRoutes = (app, fs) => {
 	});
 
 	// DATES
-	app.get('/dates', (req, res) => {
+	app.get(baseFolder + '/dates', (req, res) => {
 		readFile((data) => {
 			var result = data['dates'];
 			res.send(result);
@@ -76,7 +78,7 @@ const teamRoutes = (app, fs) => {
 	});
 
 	// ROUNDS
-	app.get('/rounds', (req, res) => {
+	app.get(baseFolder + '/rounds', (req, res) => {
 		readFile((data) => {
 			var result = data['rounds'];
 			res.send(result);
@@ -84,7 +86,7 @@ const teamRoutes = (app, fs) => {
 	});
 
 	// MATCHES
-	app.get('/matches', (req, res) => {
+	app.get(baseFolder + '/matches', (req, res) => {
 		readFile((data) => {
 			var result = data['matches'];
 			res.send(result);

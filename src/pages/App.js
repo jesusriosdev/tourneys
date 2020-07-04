@@ -3,10 +3,10 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Layout from './Layout';
 
-import Matches from '../pages/Matches';
-import Teams from '../pages/Teams';
-import Tourney from '../pages/Tourney';
-import NotFound from '../pages/NotFound';
+import Matches from './Matches';
+import Teams from './Teams';
+import Tourney from './Tourney';
+import NotFound from './NotFound';
 
 function App() {
 	return (

@@ -5,7 +5,7 @@ const tourneyRoutes = require("./tourneys");
 const appRouter = (app, fs) => {
   // we've added in a default route here that handles empty routes
   // at the base API url
-  app.get("/", (req, res) => {
+  app.get("/api", (req, res) => {
     res.send("Welcome to the Tourneys App api-server");
   });
 

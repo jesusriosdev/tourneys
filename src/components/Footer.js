@@ -6,13 +6,13 @@ class Footer extends React.Component {
 	render() {
 		const year = new Date().getFullYear();
 		return (
-			<footer>
+			<footer id="footer">
 				<div className="container">
 					<div className="row">
-						<div className="col-12 d-flex justify-content-center">
+						<div className="col-sm-6 d-flex justify-content-center align-items-center">
 							<img src={etxcoding_logo} />
 						</div>
-						<div className="col-12 d-flex justify-content-center">
+						<div className="col-sm-6 d-flex justify-content-center align-items-center">
 							<span>
 								© Copyright {year} 
 								<a
