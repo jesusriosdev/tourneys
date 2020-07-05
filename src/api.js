@@ -49,6 +49,7 @@ const api = {
 			});
 		}
 	},
+	
 	teams: {
 		list() {
 			return callApi('/teams');
@@ -70,19 +71,9 @@ const api = {
 		},
 		read(tourney_id) {
 			return callApi(`/tourneys/${tourney_id}`);
-		}
-	},
-
-	matches: {
-		async list(tourney_id) {
-			var result = await callApi('/matches');
-			var result_filtered = result.filter((item) => {
-				return item.tourney_id === tourney_id;
-			});
-			return result_filtered;
 		},
-		read(match_id) {
-			return callApi(`/matches/${match_id}`);
+		currentlyActive(tourney_type_id) {
+			return callApi(`/tourneys_active/${tourney_type_id}`);
 		}
 	},
 
@@ -98,6 +89,7 @@ const api = {
 			return callApi(`/dates/${date_id}`);
 		}
 	},
+
 	rounds: {
 		async list(tourney_id) {
 			var result = await callApi('/rounds');
@@ -108,6 +100,29 @@ const api = {
 		},
 		read(round_id) {
 			return callApi(`/rounds/${round_id}`);
+		}
+	},
+
+	knockouts: {
+		async list(tourney_type_id) {
+			var result = await callApi(`/knockouts/${tourney_type_id}`);
+			return result;
+		},
+		read(knockout_id) {
+			return callApi(`/knockouts/${knockout_id}`);
+		}
+	},
+
+	matches: {
+		async list(tourney_id) {
+			var result = await callApi('/matches');
+			var result_filtered = result.filter((item) => {
+				return item.tourney_id === tourney_id;
+			});
+			return result_filtered;
+		},
+		read(match_id) {
+			return callApi(`/matches/${match_id}`);
 		}
 	}
 };

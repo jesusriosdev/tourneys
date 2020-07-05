@@ -50,22 +50,14 @@ const teamRoutes = (app, fs) => {
 			res.send(result_filtered);
 		}, true);
 	});
-
-	// TOURNEY_TYPES
-	app.get(baseFolder + '/tourney_types', (req, res) => {
-		readFile((data) => {
-			var result = data['tourney_types'];
-			res.send(result);
-		}, true);
-	});
-	app.get(baseFolder + '/tourney_types/:id', (req, res) => {
+	app.get(baseFolder + '/tourneys_active/:id', (req, res) => {
 		readFile((data) => {
 			const id = parseInt(req.params['id']);
-			var result = data['tourney_types'];
+			var result = data['tourneys'];
 			var result_filtered = result.filter((item) => {
-				return item.id === id;
-			})[0];
-			res.send(result_filtered);
+				return item.tourney_type_id === id && item.tourney_status_id === 2;
+			});
+			res.send(result_filtered ? result_filtered[0] : []);
 		}, true);
 	});
 
@@ -82,6 +74,18 @@ const teamRoutes = (app, fs) => {
 		readFile((data) => {
 			var result = data['rounds'];
 			res.send(result);
+		}, true);
+	});
+
+	// KNOCKOUTS
+	app.get(baseFolder + '/knockouts/:id', (req, res) => {
+		readFile((data) => {
+			const id = parseInt(req.params['id']);
+			var result = data['knockouts'];
+			var result_filtered = result.filter((item) => {
+				return item.tourney_type_id === id;
+			});
+			res.send(result_filtered);
 		}, true);
 	});
 

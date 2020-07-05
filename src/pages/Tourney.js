@@ -12,11 +12,17 @@ class Tourney extends React.Component {
 		this.state = {
 			loading: true,
 			error: null,
+
 			tourney: undefined,
 			tourney_type: undefined,
-			stats: undefined,
+
+			dates: undefined,
+			rounds: undefined,
+			knockouts: undefined,
 			matches: undefined,
-			teams: undefined
+
+			teams: undefined,
+			stats: undefined
 		};
 	}
 
@@ -28,29 +34,33 @@ class Tourney extends React.Component {
 		this.setState({ loading: true, error: null });
 
 		try {
-			const tourneyId = this.props.match.params.tourneyId ?? 1;
+			const tourney_type_id = this.props.tourney_type_id;
 
-			const data_tourney = await api.tourneys.read(tourneyId);
-			const data_tourney_type = await api.tourney_types.read(
-				data_tourney.tourney_type_id
-			);
+			const data_tourney = await api.tourneys.currentlyActive(tourney_type_id);
+			const data_tourney_type = await api.tourney_types.read(tourney_type_id);
 
 			const data_dates = await api.dates.list(data_tourney.id);
 			const data_rounds = await api.rounds.list(data_tourney.id);
+			const data_knockouts = await api.knockouts.list(tourney_type_id);
 			const data_matches = await api.matches.list(data_tourney.id);
 
-			const data_teams = await api.teams.list();
+			const data_teams_raw = await api.teams.list();
+			const data_teams = data_teams_raw.filter((team) => { return team.active === true })
 			const data_stats = this.createStats(data_teams, data_matches);
 
 			this.setState({
 				loading: false,
+
 				tourney: data_tourney,
 				tourney_type: data_tourney_type,
-				stats: data_stats,
+
 				dates: data_dates,
 				rounds: data_rounds,
+				knockouts: data_knockouts,
 				matches: data_matches,
-				teams: data_teams
+
+				teams: data_teams,
+				stats: data_stats
 			});
 		} catch (error) {
 			this.setState({ loading: false, error: error });
@@ -133,6 +143,56 @@ class Tourney extends React.Component {
 		);
 	}
 
+	RenderTourney = ({ tourney_type }) => {
+		switch (tourney_type.id) {
+			case 1:
+				// TORNEO.
+				return '';
+
+				break;
+
+			case 2:
+				// LIGA.
+				return (
+					<>
+						<Table tourney_type_id={tourney_type.id} stats={this.state.stats} />
+
+						<MatchesList
+							tourney_type_id={tourney_type.id} 
+							teams={this.state.teams}
+							dates={this.state.dates}
+							rounds={this.state.rounds}
+							matches={this.state.matches}
+						/>
+					</>
+				);
+
+			case 3:
+				// COPA
+				return (
+					<>
+						<MatchesList
+							tourney_type_id={tourney_type.id} 
+							teams={this.state.teams}
+							dates={this.state.dates}
+							rounds={this.state.rounds}
+							knockouts={this.state.knockouts}
+							matches={this.state.matches}
+						/>
+					</>
+				);
+
+			case 4:
+				// CHAMPIONS
+				return '';
+
+				break;
+
+			default:
+				return '';
+		}
+	};
+
 	render() {
 		if (this.state.loading === true) {
 			return <PageLoading />;
@@ -142,7 +202,7 @@ class Tourney extends React.Component {
 			return <PageError error={this.state.error} />;
 		}
 
-		if (this.state.tourney && this.state.tourney.tourney_type_id === 2) {
+		if (this.state.tourney) {
 			return (
 				<div className="container">
 					<div className="row">
@@ -151,20 +211,12 @@ class Tourney extends React.Component {
 								{this.state.tourney_type.description} {this.state.tourney.year}
 							</h1>
 						</div>
-
-						<Table stats={this.state.stats} />
-
-						<MatchesList
-							teams={this.state.teams}
-							dates={this.state.dates}
-							rounds={this.state.rounds}
-							matches={this.state.matches}
-						/>
+						{<this.RenderTourney tourney_type={this.state.tourney_type} />}
 					</div>
 				</div>
 			);
 		} else {
-			return <PageError error={this.state.error} />;
+			return 'No existe ningún torneo';
 		}
 	}
 }

@@ -22,8 +22,14 @@
 	font-size: 1.5rem;
 }
 
+.date-card__content {
+	display: flex;
+    flex-wrap: wrap;
+}
+
 .round-card {
-	border-bottom: solid 1px #ebebeb;
+	border-bottom: solid 1px #ebebeb;    
+	width: 100%;
 }
 
 .round-card__header {

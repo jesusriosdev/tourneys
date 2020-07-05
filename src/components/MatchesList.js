@@ -32,9 +32,9 @@ class MatchesList extends React.Component {
 		} else return '';
 	};
 
-	RenderMatches = (round_id) => {
+	RenderMatches = (round_id, knockout_id) => {
 		var round_matches = this.props.matches.filter((match) => {
-			return match.round_id === round_id;
+			return (round_id && match.round_id === round_id) || (knockout_id && match.knockout_id === knockout_id);
 		});
 
 		return (
@@ -136,7 +136,7 @@ class MatchesList extends React.Component {
 								Jornada: {round.round_number}
 							</div>
 							<div className="round-card__content">
-								{this.RenderMatches(round.id)}
+								{this.RenderMatches(round.id, null)}
 							</div>
 						</div>
 					);
@@ -169,6 +169,54 @@ class MatchesList extends React.Component {
 		);
 	};
 
+	RenderKnockouts = () => {
+		return (
+			<React.Fragment>
+				{this.props.knockouts.map((knockout) => {
+					return (
+						<div className="date-card" key={knockout.id}>
+							<div className="date-card__header">
+								<div className="date-card__header__date">
+									{knockout.description}
+								</div>
+							</div>
+							<div className="date-card__content">
+								{this.RenderMatches(null, knockout.id)}
+							</div>
+						</div>
+					);
+				})}
+			</React.Fragment>
+		);
+	};
+
+	RenderMatchesList = () => {
+		switch (this.props.tourney_type_id) {
+			case 1:
+				// TORNEO.
+				return '';
+
+				break;
+
+			case 2:
+				// LIGA.
+				return <div className="tourney-matches">{this.RenderDates()}</div>;
+
+			case 3:
+				// COPA
+				return <div className="tourney-matches">{this.RenderKnockouts()}</div>;
+
+			case 4:
+				// CHAMPIONS
+				return '';
+
+				break;
+
+			default:
+				return '';
+		}
+	};
+
 	render() {
 		if (this.props.matches.length === 0) {
 			return (
@@ -180,7 +228,7 @@ class MatchesList extends React.Component {
 
 		return (
 			<React.Fragment>
-				<div className="tourney-matches">{this.RenderDates()}</div>
+				{this.RenderMatchesList()}
 			</React.Fragment>
 		);
 	}

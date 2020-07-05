@@ -10,8 +10,8 @@ app.use((req, res, next) => {
 		'Access-Control-Allow-Headers',
 		'X-Requested-With, Content-type,Accept,X-Access-Token,X-Key'
 	);
-	// res.header('Access-Control-Allow-Origin', 'https://torneosfeg.com');
-	res.header('Access-Control-Allow-Origin', '*');
+	res.header('Access-Control-Allow-Origin', 'https://torneosfeg.com');
+	// res.header('Access-Control-Allow-Origin', '*');
 	next();
 });
 

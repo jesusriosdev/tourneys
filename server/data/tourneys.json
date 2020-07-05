@@ -1,46 +1,4 @@
 {
-	"tourney_types": [
-		{
-			"id": 1,
-			"description": "TORNEO FEG",
-			"image_path": ""
-		},
-		{
-			"id": 2,
-			"description": "LIGA FEG",
-			"image_path": ""
-		},
-		{
-			"id": 3,
-			"description": "COPA FEG",
-			"image_path": ""
-		},
-		{
-			"id": 4,
-			"description": "CHAMPIONS FEG",
-			"image_path": ""
-		}
-	],
-
-	"torney_status": [
-		{
-			"id": 1,
-			"description": "On Hold"
-		},
-		{
-			"id": 2,
-			"description": "In Progress"
-		},
-		{
-			"id": 3,
-			"description": "Completed"
-		},
-		{
-			"id": 4,
-			"description": "Canceled"
-		}
-	],
-
 	"tourneys": [
 		{
 			"id": 1,
@@ -223,36 +181,26 @@
 	],
 
 	"knockouts": [
-		{
-			"id": 0,
-			"number": 1,
-			"description": "Repechaje"
-		},
+		
 		{
 			"id": 1,
-			"number": 1,
+			"tourney_type_id": 3,
 			"description": "Cuartos de Final"
 		},
 		{
 			"id": 2,
-			"number": 1,
-			"description": "Semifinales"
+			"tourney_type_id": 3,
+			"description": "Repechaje"
 		},
 		{
 			"id": 3,
-			"number": 1,
-			"description": "Final"
-		}
-	],
-
-	"match_status": [
-		{
-			"id": 1,
-			"description": "Pending"
+			"tourney_type_id": 3,
+			"description": "Semifinales"
 		},
 		{
-			"id": 2,
-			"description": "Completed"
+			"id": 4,
+			"tourney_type_id": 3,
+			"description": "Final"
 		}
 	],
 
@@ -973,5 +921,6 @@
 			"local_team_score": 0,
 			"away_team_score": 0
 		}
+		
 	]
 }

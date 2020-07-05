@@ -10,7 +10,7 @@ class Footer extends React.Component {
 				<div className="container">
 					<div className="row">
 						<div className="col-sm-6 d-flex justify-content-center align-items-center">
-							<img src={etxcoding_logo} />
+							<img src={etxcoding_logo} alt="etxcoding_logo" />
 						</div>
 						<div className="col-sm-6 d-flex justify-content-center align-items-center">
 							<span>

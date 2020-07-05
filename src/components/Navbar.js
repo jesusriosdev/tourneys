@@ -5,21 +5,19 @@ import logo from '../images/logo-feg_94x59.png';
 
 class Navbar extends React.Component {
 	constructor(props) {
-        super(props)
-        this.state = {
-            checkboxChecked: false
-        }
+		super(props);
+		this.state = {
+			checkboxChecked: false
+		};
 	}
-	
-    onClick = () => {
-        this.setState({
-            checkboxChecked: !this.state.checkboxChecked
-        })
-    }
 
-    checkboxHandler = () => {
-		
-    }
+	onClick = () => {
+		this.setState({
+			checkboxChecked: !this.state.checkboxChecked
+		});
+	};
+
+	checkboxHandler = () => {};
 
 	render() {
 		return (
@@ -30,22 +28,38 @@ class Navbar extends React.Component {
 					<span className="font-weight-bold">FEG</span>
 				</Link>
 
-				<input type="checkbox" id="check" checked={this.state.checkboxChecked} onChange={this.checkboxHandler} />
-				<label className="checkbtn" onClick = {this.onClick} >
+				<input
+					type="checkbox"
+					id="check"
+					checked={this.state.checkboxChecked}
+					onChange={this.checkboxHandler}
+				/>
+				<label className="checkbtn" onClick={this.onClick}>
 					<i className="fa fa-bars"></i>
 				</label>
-				
+
 				<ul>
 					<li>
-						<Link className="active" to="/teams" onClick={this.onClick} >
+						<Link className="active" to="/teams" onClick={this.onClick}>
 							Equipos
 						</Link>
 					</li>
 					<li>
-						<Link to="/liga" onClick = {this.onClick} >Liga</Link>
+						<Link to="/liga" onClick={this.onClick}>
+							Liga
+						</Link>
 					</li>
+					<li>
+						<Link to="/copa" onClick={this.onClick}>
+							Copa
+						</Link>
+					</li>
+					{/* <li>
+						<Link to="/champions" onClick={this.onClick}>
+							Champions
+						</Link>
+					</li> */}
 				</ul>
-
 			</nav>
 		);
 	}
