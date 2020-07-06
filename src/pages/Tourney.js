@@ -149,8 +149,6 @@ class Tourney extends React.Component {
 				// TORNEO.
 				return '';
 
-				break;
-
 			case 2:
 				// LIGA.
 				return (
@@ -185,8 +183,6 @@ class Tourney extends React.Component {
 			case 4:
 				// CHAMPIONS
 				return '';
-
-				break;
 
 			default:
 				return '';

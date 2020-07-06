@@ -40,7 +40,7 @@ class Navbar extends React.Component {
 
 				<ul>
 					<li>
-						<Link className="active" to="/teams" onClick={this.onClick}>
+						<Link className="active" to="/equipos" onClick={this.onClick}>
 							Equipos
 						</Link>
 					</li>

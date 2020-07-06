@@ -2,10 +2,7 @@ import React from 'react';
 import './styles/MatchesList.css';
 
 class MatchesList extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-
+	
 	componentDidMount() {}
 
 	GetTeam = (team_id) => {
@@ -196,8 +193,6 @@ class MatchesList extends React.Component {
 				// TORNEO.
 				return '';
 
-				break;
-
 			case 2:
 				// LIGA.
 				return <div className="tourney-matches">{this.RenderDates()}</div>;
@@ -209,8 +204,6 @@ class MatchesList extends React.Component {
 			case 4:
 				// CHAMPIONS
 				return '';
-
-				break;
 
 			default:
 				return '';

@@ -11,6 +11,7 @@ app.use((req, res, next) => {
 		'X-Requested-With, Content-type,Accept,X-Access-Token,X-Key'
 	);
 	res.header('Access-Control-Allow-Origin', 'https://torneosfeg.com');
+	res.header('Access-Control-Allow-Origin', 'http://torneosfeg.com');
 	// res.header('Access-Control-Allow-Origin', '*');
 	next();
 });

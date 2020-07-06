@@ -56,6 +56,12 @@ const api = {
 		}
 	},
 
+	championships: {
+		list() {
+			return callApi('/championships');
+		}
+	},
+
 	tourney_types: {
 		list() {
 			return callApi('/tourney_types');
