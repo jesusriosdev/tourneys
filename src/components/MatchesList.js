@@ -95,6 +95,10 @@ class MatchesList extends React.Component {
 									}`}
 								>
 									{match.match_status_id === 2 ? match.local_team_score : '-'}
+									{this.RenderWinnerArrow(
+										match.local_team_score,
+										match.away_team_score
+									)}
 								</div>
 								<div
 									className={`match-card__teams__team ${
