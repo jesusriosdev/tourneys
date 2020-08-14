@@ -96,6 +96,32 @@ const teamRoutes = (app, fs) => {
 			res.send(result);
 		}, true);
 	});
+
+
+	// GROUPS
+	app.get(baseFolder + '/groups/:id', (req, res) => {
+		readFile((data) => {
+			const id = parseInt(req.params['id']);
+			var result = data['groups'];
+			var result_filtered = result.filter((item) => {
+				return item.tourney_id === id;
+			});
+			res.send(result_filtered);
+		}, true);
+	});
+
+	// GROUP_TEAMS
+	app.get(baseFolder + '/group_teams/:id', (req, res) => {
+		readFile((data) => {
+			const id = parseInt(req.params['id']);
+			var result = data['group_teams'];
+			var result_filtered = result.filter((item) => {
+				return item.tourney_id === id;
+			});
+			res.send(result_filtered);
+		}, true);
+	});
+
 };
 
 module.exports = teamRoutes;

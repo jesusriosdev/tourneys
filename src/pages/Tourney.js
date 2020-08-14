@@ -15,13 +15,13 @@ class Tourney extends React.Component {
 
 			tourney: undefined,
 			tourney_type: undefined,
+			teams: undefined,
+			matches: undefined,
 
 			dates: undefined,
 			rounds: undefined,
 			knockouts: undefined,
-			matches: undefined,
 
-			teams: undefined,
 			stats: undefined
 		};
 	}
@@ -38,30 +38,65 @@ class Tourney extends React.Component {
 
 			const data_tourney = await api.tourneys.currentlyActive(tourney_type_id);
 			const data_tourney_type = await api.tourney_types.read(tourney_type_id);
-
-			const data_dates = await api.dates.list(data_tourney.id);
-			const data_rounds = await api.rounds.list(data_tourney.id);
-			const data_knockouts = await api.knockouts.list(tourney_type_id);
+			const data_teams_raw = await api.teams.list();
+			const data_teams = data_teams_raw.filter((team) => {
+				return team.active === true;
+			});
 			const data_matches = await api.matches.list(data_tourney.id);
 
-			const data_teams_raw = await api.teams.list();
-			const data_teams = data_teams_raw.filter((team) => { return team.active === true })
-			const data_stats = this.createStats(data_teams, data_matches);
+			switch (tourney_type_id) {
+				case 1:
+					// TORNEO.
 
-			this.setState({
-				loading: false,
+					break;
+				case 2:
+					// LIGA.
 
-				tourney: data_tourney,
-				tourney_type: data_tourney_type,
+					const data_dates = await api.dates.list(data_tourney.id);
+					const data_rounds = await api.rounds.list(data_tourney.id);
 
-				dates: data_dates,
-				rounds: data_rounds,
-				knockouts: data_knockouts,
-				matches: data_matches,
+					const data_stats = this.createStats(data_teams, data_matches);
 
-				teams: data_teams,
-				stats: data_stats
-			});
+					this.setState({
+						loading: false,
+
+						tourney: data_tourney,
+						tourney_type: data_tourney_type,
+						teams: data_teams,
+						matches: data_matches,
+
+						dates: data_dates,
+						rounds: data_rounds,
+
+						stats: data_stats
+					});
+
+					break;
+				case 3:
+					// COPA
+
+					const data_knockouts = await api.knockouts.list(tourney_type_id);
+
+					this.setState({
+						loading: false,
+
+						tourney: data_tourney,
+						tourney_type: data_tourney_type,
+						teams: data_teams,
+						matches: data_matches,
+
+						knockouts: data_knockouts
+					});
+
+					break;
+				case 4:
+					// CHAMPIONS
+
+					break;
+				default:
+
+					break;
+			}
 		} catch (error) {
 			this.setState({ loading: false, error: error });
 		}
@@ -151,12 +186,13 @@ class Tourney extends React.Component {
 
 			case 2:
 				// LIGA.
+
 				return (
 					<>
 						<Table tourney_type_id={tourney_type.id} stats={this.state.stats} />
 
 						<MatchesList
-							tourney_type_id={tourney_type.id} 
+							tourney_type_id={tourney_type.id}
 							teams={this.state.teams}
 							dates={this.state.dates}
 							rounds={this.state.rounds}
@@ -170,10 +206,9 @@ class Tourney extends React.Component {
 				return (
 					<>
 						<MatchesList
-							tourney_type_id={tourney_type.id} 
+							tourney_type_id={tourney_type.id}
 							teams={this.state.teams}
-							dates={this.state.dates}
-							rounds={this.state.rounds}
+							
 							knockouts={this.state.knockouts}
 							matches={this.state.matches}
 						/>
@@ -182,7 +217,20 @@ class Tourney extends React.Component {
 
 			case 4:
 				// CHAMPIONS
-				return '';
+
+				return (
+					<>
+						<Table tourney_type_id={tourney_type.id} stats={this.state.stats} />
+
+						<MatchesList
+							tourney_type_id={tourney_type.id}
+							teams={this.state.teams}
+							dates={this.state.dates}
+							rounds={this.state.rounds}
+							matches={this.state.matches}
+						/>
+					</>
+				);
 
 			default:
 				return '';

@@ -130,7 +130,22 @@ const api = {
 		read(match_id) {
 			return callApi(`/matches/${match_id}`);
 		}
+	},
+
+	groups: {
+		async list(tourney_id) {
+			var result = await callApi(`/groups/${tourney_id}`);
+			return result;
+		}
+	},
+
+	group_teams: {
+		async list(tourney_id) {
+			var result = await callApi(`/group_teams/${tourney_id}`);
+			return result;
+		}
 	}
+
 };
 
 export default api;
