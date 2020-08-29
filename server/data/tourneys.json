@@ -3,6 +3,7 @@
 		{
 			"id": 1,
 			"tourney_type_id": 2,
+			"edition": "(8va Edicion)",
 			"year": 2020,
 			"tourney_status_id": 2
 		},
@@ -17,6 +18,12 @@
 			"tourney_type_id": 4,
 			"year": 2020,
 			"tourney_status_id": 2
+		},
+		{
+			"id": 4,
+			"tourney_type_id": 1,
+			"year": 2020,
+			"tourney_status_id": 1
 		}
 	],
 
@@ -25,31 +32,31 @@
 			"id": 1,
 			"tourney_id": 1,
 			"date_number": 1,
-			"description": "Julio 1 - Julio 5"
+			"description": "Julio 1 - Agosto 16"
 		},
 		{
 			"id": 2,
 			"tourney_id": 1,
 			"date_number": 2,
-			"description": "Julio 6 - Julio 8"
+			"description": "Agosto 24 - Agosto 30"
 		},
 		{
 			"id": 3,
 			"tourney_id": 1,
 			"date_number": 3,
-			"description": "Julio 9 - Julio 11"
+			"description": "Agosto 31 - Septiembre 6"
 		},
 		{
 			"id": 4,
 			"tourney_id": 1,
 			"date_number": 4,
-			"description": "Julio 12 - Julio 14"
+			"description": "Septiembre 7 - Septiembre 13"
 		},
 		{
 			"id": 5,
 			"tourney_id": 1,
 			"date_number": 5,
-			"description": "Julio 15 - Julio 17"
+			"description": "Septiembre 14 - Septiembre 20"
 		}
 	],
 
@@ -236,17 +243,6 @@
 			"local_team_score": 2,
 			"away_team_score": 3
 		},
-		{
-			"id": 3,
-			"tourney_id": 1,
-			"round_id": 1,
-			"match_status_id": 2,
-
-			"local_team_id": 4,
-			"away_team_id": 5,
-			"local_team_score": 3,
-			"away_team_score": 4
-		},
 
 		{
 			"id": 4,
@@ -260,49 +256,27 @@
 			"away_team_score": 1
 		},
 		{
-			"id": 5,
-			"tourney_id": 1,
-			"round_id": 2,
-			"match_status_id": 1,
-
-			"local_team_id": 5,
-			"away_team_id": 1,
-			"local_team_score": 0,
-			"away_team_score": 0
-		},
-		{
 			"id": 6,
 			"tourney_id": 1,
 			"round_id": 2,
-			"match_status_id": 1,
+			"match_status_id": 2,
 
 			"local_team_id": 3,
 			"away_team_id": 6,
-			"local_team_score": 0,
-			"away_team_score": 0
+			"local_team_score": 2,
+			"away_team_score": 4
 		},
 
 		{
 			"id": 7,
 			"tourney_id": 1,
 			"round_id": 3,
-			"match_status_id": 1,
+			"match_status_id": 2,
 
 			"local_team_id": 2,
 			"away_team_id": 3,
-			"local_team_score": 0,
-			"away_team_score": 0
-		},
-		{
-			"id": 8,
-			"tourney_id": 1,
-			"round_id": 3,
-			"match_status_id": 2,
-
-			"local_team_id": 6,
-			"away_team_id": 5,
-			"local_team_score": 1,
-			"away_team_score": 3
+			"local_team_score": 7,
+			"away_team_score": 2
 		},
 		{
 			"id": 9,
@@ -320,11 +294,11 @@
 			"id": 10,
 			"tourney_id": 1,
 			"round_id": 4,
-			"match_status_id": 1,
+			"match_status_id": 2,
 
 			"local_team_id": 1,
 			"away_team_id": 2,
-			"local_team_score": 0,
+			"local_team_score": 4,
 			"away_team_score": 0
 		},
 		{
@@ -338,29 +312,7 @@
 			"local_team_score": 2,
 			"away_team_score": 0
 		},
-		{
-			"id": 12,
-			"tourney_id": 1,
-			"round_id": 4,
-			"match_status_id": 1,
 
-			"local_team_id": 5,
-			"away_team_id": 3,
-			"local_team_score": 0,
-			"away_team_score": 0
-		},
-
-		{
-			"id": 13,
-			"tourney_id": 1,
-			"round_id": 5,
-			"match_status_id": 1,
-
-			"local_team_id": 2,
-			"away_team_id": 5,
-			"local_team_score": 0,
-			"away_team_score": 0
-		},
 		{
 			"id": 14,
 			"tourney_id": 1,
@@ -376,127 +328,83 @@
 			"id": 15,
 			"tourney_id": 1,
 			"round_id": 5,
-			"match_status_id": 1,
+			"match_status_id": 2,
 
 			"local_team_id": 6,
 			"away_team_id": 1,
-			"local_team_score": 0,
-			"away_team_score": 0
+			"local_team_score": 2,
+			"away_team_score": 1
 		},
 
 		{
 			"id": 16,
 			"tourney_id": 1,
 			"round_id": 6,
-			"match_status_id": 1,
+			"match_status_id": 2,
 
 			"local_team_id": 3,
 			"away_team_id": 2,
 			"local_team_score": 0,
-			"away_team_score": 0
-		},
-		{
-			"id": 17,
-			"tourney_id": 1,
-			"round_id": 6,
-			"match_status_id": 1,
-
-			"local_team_id": 5,
-			"away_team_id": 6,
-			"local_team_score": 0,
-			"away_team_score": 0
+			"away_team_score": 2
 		},
 		{
 			"id": 18,
 			"tourney_id": 1,
 			"round_id": 6,
-			"match_status_id": 1,
+			"match_status_id": 2,
 
 			"local_team_id": 4,
 			"away_team_id": 1,
 			"local_team_score": 0,
-			"away_team_score": 0
+			"away_team_score": 2
 		},
 
 		{
 			"id": 19,
 			"tourney_id": 1,
 			"round_id": 7,
-			"match_status_id": 1,
+			"match_status_id": 2,
 
 			"local_team_id": 2,
 			"away_team_id": 4,
-			"local_team_score": 0,
-			"away_team_score": 0
-		},
-		{
-			"id": 20,
-			"tourney_id": 1,
-			"round_id": 7,
-			"match_status_id": 1,
-
-			"local_team_id": 1,
-			"away_team_id": 5,
-			"local_team_score": 0,
+			"local_team_score": 5,
 			"away_team_score": 0
 		},
 		{
 			"id": 21,
 			"tourney_id": 1,
 			"round_id": 7,
-			"match_status_id": 1,
+			"match_status_id": 2,
 
 			"local_team_id": 6,
 			"away_team_id": 3,
-			"local_team_score": 0,
-			"away_team_score": 0
+			"local_team_score": 3,
+			"away_team_score": 2
 		},
 
 		{
 			"id": 22,
 			"tourney_id": 1,
 			"round_id": 8,
-			"match_status_id": 1,
+			"match_status_id": 2,
 
 			"local_team_id": 6,
 			"away_team_id": 2,
-			"local_team_score": 0,
-			"away_team_score": 0
+			"local_team_score": 4,
+			"away_team_score": 6
 		},
 		{
 			"id": 23,
 			"tourney_id": 1,
 			"round_id": 8,
-			"match_status_id": 1,
+			"match_status_id": 2,
 
 			"local_team_id": 3,
 			"away_team_id": 1,
 			"local_team_score": 0,
-			"away_team_score": 0
-		},
-		{
-			"id": 24,
-			"tourney_id": 1,
-			"round_id": 8,
-			"match_status_id": 1,
-
-			"local_team_id": 5,
-			"away_team_id": 4,
-			"local_team_score": 0,
-			"away_team_score": 0
+			"away_team_score": 3
 		},
 
-		{
-			"id": 25,
-			"tourney_id": 1,
-			"round_id": 9,
-			"match_status_id": 1,
-
-			"local_team_id": 5,
-			"away_team_id": 2,
-			"local_team_score": 0,
-			"away_team_score": 0
-		},
 		{
 			"id": 26,
 			"tourney_id": 1,
@@ -542,17 +450,6 @@
 			"local_team_score": 0,
 			"away_team_score": 0
 		},
-		{
-			"id": 30,
-			"tourney_id": 1,
-			"round_id": 10,
-			"match_status_id": 1,
-
-			"local_team_id": 3,
-			"away_team_id": 5,
-			"local_team_score": 0,
-			"away_team_score": 0
-		},
 
 		{
 			"id": 31,
@@ -576,17 +473,6 @@
 			"local_team_score": 0,
 			"away_team_score": 0
 		},
-		{
-			"id": 33,
-			"tourney_id": 1,
-			"round_id": 11,
-			"match_status_id": 1,
-
-			"local_team_id": 4,
-			"away_team_id": 5,
-			"local_team_score": 0,
-			"away_team_score": 0
-		},
 
 		{
 			"id": 34,
@@ -596,17 +482,6 @@
 
 			"local_team_id": 4,
 			"away_team_id": 2,
-			"local_team_score": 0,
-			"away_team_score": 0
-		},
-		{
-			"id": 35,
-			"tourney_id": 1,
-			"round_id": 12,
-			"match_status_id": 1,
-
-			"local_team_id": 5,
-			"away_team_id": 1,
 			"local_team_score": 0,
 			"away_team_score": 0
 		},
@@ -630,17 +505,6 @@
 
 			"local_team_id": 2,
 			"away_team_id": 3,
-			"local_team_score": 0,
-			"away_team_score": 0
-		},
-		{
-			"id": 38,
-			"tourney_id": 1,
-			"round_id": 13,
-			"match_status_id": 1,
-
-			"local_team_id": 6,
-			"away_team_id": 5,
 			"local_team_score": 0,
 			"away_team_score": 0
 		},
@@ -678,29 +542,7 @@
 			"local_team_score": 0,
 			"away_team_score": 0
 		},
-		{
-			"id": 42,
-			"tourney_id": 1,
-			"round_id": 14,
-			"match_status_id": 1,
 
-			"local_team_id": 5,
-			"away_team_id": 3,
-			"local_team_score": 0,
-			"away_team_score": 0
-		},
-
-		{
-			"id": 43,
-			"tourney_id": 1,
-			"round_id": 15,
-			"match_status_id": 1,
-
-			"local_team_id": 2,
-			"away_team_id": 5,
-			"local_team_score": 0,
-			"away_team_score": 0
-		},
 		{
 			"id": 44,
 			"tourney_id": 1,
@@ -736,17 +578,6 @@
 			"away_team_score": 0
 		},
 		{
-			"id": 47,
-			"tourney_id": 1,
-			"round_id": 16,
-			"match_status_id": 1,
-
-			"local_team_id": 5,
-			"away_team_id": 6,
-			"local_team_score": 0,
-			"away_team_score": 0
-		},
-		{
 			"id": 48,
 			"tourney_id": 1,
 			"round_id": 16,
@@ -766,17 +597,6 @@
 
 			"local_team_id": 2,
 			"away_team_id": 4,
-			"local_team_score": 0,
-			"away_team_score": 0
-		},
-		{
-			"id": 50,
-			"tourney_id": 1,
-			"round_id": 17,
-			"match_status_id": 1,
-
-			"local_team_id": 1,
-			"away_team_id": 5,
 			"local_team_score": 0,
 			"away_team_score": 0
 		},
@@ -814,29 +634,7 @@
 			"local_team_score": 0,
 			"away_team_score": 0
 		},
-		{
-			"id": 54,
-			"tourney_id": 1,
-			"round_id": 18,
-			"match_status_id": 1,
 
-			"local_team_id": 5,
-			"away_team_id": 4,
-			"local_team_score": 0,
-			"away_team_score": 0
-		},
-
-		{
-			"id": 55,
-			"tourney_id": 1,
-			"round_id": 19,
-			"match_status_id": 1,
-
-			"local_team_id": 5,
-			"away_team_id": 2,
-			"local_team_score": 0,
-			"away_team_score": 0
-		},
 		{
 			"id": 56,
 			"tourney_id": 1,
@@ -882,17 +680,6 @@
 			"local_team_score": 0,
 			"away_team_score": 0
 		},
-		{
-			"id": 60,
-			"tourney_id": 1,
-			"round_id": 20,
-			"match_status_id": 1,
-
-			"local_team_id": 3,
-			"away_team_id": 5,
-			"local_team_score": 0,
-			"away_team_score": 0
-		},
 
 		{
 			"id": 1001,
@@ -902,62 +689,110 @@
 
 			"local_team_id": 2,
 			"away_team_id": 6,
-			"local_team_score": 11,
-			"away_team_score": 3
-		},
-		{
-			"id": 1002,
-			"tourney_id": 2,
-			"knockout_id": 1,
-			"match_status_id": 1,
-
-			"local_team_id": 5,
-			"away_team_id": 3,
-			"local_team_score": 0,
-			"away_team_score": 0
+			"local_team_score": 5,
+			"away_team_score": 1
 		},
 		{
 			"id": 1003,
 			"tourney_id": 2,
 			"knockout_id": 1,
-			"match_status_id": 1,
+			"match_status_id": 2,
 
 			"local_team_id": 4,
 			"away_team_id": 1,
-			"local_team_score": 0,
-			"away_team_score": 0
+			"local_team_score": 1,
+			"away_team_score": 1
 		},
 
 		{
 			"id": 1004,
 			"tourney_id": 2,
 			"knockout_id": 2,
-			"match_status_id": 1,
+			"match_status_id": 2,
 
 			"local_team_id": 6,
 			"away_team_id": 2,
-			"local_team_score": 0,
-			"away_team_score": 0
-		},
-		{
-			"id": 1005,
-			"tourney_id": 2,
-			"knockout_id": 2,
-			"match_status_id": 1,
-
-			"local_team_id": 3,
-			"away_team_id": 5,
-			"local_team_score": 0,
-			"away_team_score": 0
+			"local_team_score": 2,
+			"away_team_score": 6
 		},
 		{
 			"id": 1006,
 			"tourney_id": 2,
 			"knockout_id": 2,
-			"match_status_id": 1,
+			"match_status_id": 2,
 
 			"local_team_id": 1,
 			"away_team_id": 4,
+			"local_team_score": 4,
+			"away_team_score": 2
+		},
+		
+		{
+			"id": 1007,
+			"tourney_id": 2,
+			"knockout_id": 3,
+			"match_status_id": 2,
+
+			"local_team_id": 4,
+			"away_team_id": 6,
+			"local_team_score": 4,
+			"away_team_score": 5
+		},
+
+		{
+			"id": 1008,
+			"tourney_id": 2,
+			"knockout_id": 4,
+			"match_status_id": 2,
+
+			"local_team_id": 2,
+			"away_team_id": 6,
+			"local_team_score": 6,
+			"away_team_score": 4
+		},
+		{
+			"id": 1009,
+			"tourney_id": 2,
+			"knockout_id": 4,
+			"match_status_id": 2,
+
+			"local_team_id": 1,
+			"away_team_id": 3,
+			"local_team_score": 3,
+			"away_team_score": 0
+		},
+
+		{
+			"id": 1010,
+			"tourney_id": 2,
+			"knockout_id": 5,
+			"match_status_id": 2,
+
+			"local_team_id": 6,
+			"away_team_id": 2,
+			"local_team_score": 2,
+			"away_team_score": 6
+		},
+		{
+			"id": 1011,
+			"tourney_id": 2,
+			"knockout_id": 5,
+			"match_status_id": 2,
+
+			"local_team_id": 3,
+			"away_team_id": 1,
+			"local_team_score": 2,
+			"away_team_score": 1
+		},
+		
+		{
+			"id": 1012,
+			"tourney_id": 2,
+			"knockout_id": 6,
+			"match_status_id": 1,
+
+			"local_team_id": 2,
+			"away_team_id": 1,
 			"local_team_score": 0,
 			"away_team_score": 0
 		},
@@ -980,51 +815,6 @@
 			"match_status_id": 1,
 
 			"local_team_id": 3,
-			"away_team_id": 4,
-			"local_team_score": 0,
-			"away_team_score": 0
-		},
-		{
-			"id": 2003,
-			"tourney_id": 3,
-			"group_id": 1,
-			"match_status_id": 1,
-
-			"local_team_id": 3,
-			"away_team_id": 5,
-			"local_team_score": 0,
-			"away_team_score": 0
-		},
-		{
-			"id": 2004,
-			"tourney_id": 3,
-			"group_id": 1,
-			"match_status_id": 1,
-
-			"local_team_id": 5,
-			"away_team_id": 3,
-			"local_team_score": 0,
-			"away_team_score": 0
-		},
-
-		{
-			"id": 2005,
-			"tourney_id": 3,
-			"group_id": 1,
-			"match_status_id": 1,
-
-			"local_team_id": 4,
-			"away_team_id": 5,
-			"local_team_score": 0,
-			"away_team_score": 0
-		},
-		{
-			"id": 2006,
-			"tourney_id": 3,
-			"group_id": 1,
-			"match_status_id": 1,
-
-			"local_team_id": 5,
 			"away_team_id": 4,
 			"local_team_score": 0,
 			"away_team_score": 0
